@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+    <form>
+        <!-- <div id="email"> -->
+        <h1>Check Your Email !</h1>
+        <h2></h2>
+        <input type="text" placeholder="email" id="email">
+        <!-- </div> -->
+    </form>
+
+    <style>
+    /* .red {
+        border: 10px solid red !important;
+        color: red
+    }
+
+    .green {
+        border: 10px solid green !important;
+        color:green
+    } */
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="./lib/validate-email.js"></script>
+    <script>
+        // // native js
+        // let h2 = document.querySelector('h2');
+        // let email = document.querySelector('#email');
+
+        // document.querySelector('#email').addEventListener('keyup', function() {
+         
+        //     if(validateEmail(this.value)) {
+        //         // console.log(true);
+        //         h2.style.color = 'green'
+        //         email.style.borderColor = 'green'
+        //         h2.textContent = 'Email is correct !'
+                
+        //     } else {
+        //         // console.log(false);
+        //         h2.style.color = 'red';
+        //         email.style.borderColor = 'red'
+        //         h2.textContent = 'Email address is not valid.'
+        //     }
+
+        // })
+
+        // JQuery     
+        let email = $('#email');
+        let h2 = $('h2');
+
+        email.keyup(function() {
+            // console.log(this.value)
+            
+            if (validateEmail(this.value)) {
+                // console.log(true);
+                h2.text('Email address is correct !').css("color", "green")
+                email.css("border-color", "green")
+                email.css("color", "green")
+
+            } else {
+                // console.log(false);
+                h2.text('Email address is not valid !').css({'color':'red'})
+                email.css({'border-color':'red','color':'red'})
+            }
+        })
+
+    </script>
+</body>
+</html>
