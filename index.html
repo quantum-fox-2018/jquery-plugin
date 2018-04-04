@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Plugin</title>
+  </head>
+  <body>
+    <h2>jQuery Plugin</h2>
+    <h3>Validate Email</h3>
+    <form>
+      <input type="text" name="email" value="">
+    </form>
+    <p></p>
+    <script src="./lib/validate-email.js"></script>
+    <script>
+    let p = document.querySelector('p')
+      document.querySelector('input[name="email"]').addEventListener('keyup',function(){
+        if(validateEmail(this.value)){
+          p.textContent = 'Email is correct'
+          p.style.color = 'green'
+        } else {
+          p.textContent = 'Email is incorrect'
+          p.style.color = 'red'
+        }
+      })
+    </script>
+  </body>
+</html>
