@@ -12,19 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./lib/validate-email.js"></script>
         <script>
-            
-             $('[name="email"]').keyup(function() {
-
-                let email = this.value
-
-                if(validateEmail(email)){
-                    $('span').text("").css("color","red")
-                    $('[name="email"]').css({"border-color": "green", "border-solid": "bold", "border-width": "3px"})
-               }else{
-                    $('span').text("Email address is not valid").css("color","red")
-                    $('[name="email"]').css({"border-color": "red", "border-solid": "bold", "border-width": "3px"})
-               }
-            });
+             $('[name="email"]').validateEmail()        
         </script>
     </body>
 </html>
