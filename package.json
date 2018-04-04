@@ -1,0 +1,24 @@
+{
+  "name": "jquery-plugin",
+  "version": "1.0.0",
+  "description": "simple jquery plugin",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barestu/jquery-plugin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barestu/jquery-plugin/issues"
+  },
+  "homepage": "https://github.com/barestu/jquery-plugin#readme",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3"
+  }
+}
