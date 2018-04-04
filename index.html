@@ -11,23 +11,12 @@
   <h1>Check your email!</h1>
 
   <p>Input an email address:</p>
-  <input>
-  <span></span>
-
+  <input name="email">
+  <span name="info"></span>
 
   <script>
-    let input = $('input')
-    let info = $('span')
-
-    input.keyup(function () {
-      if (validateEmail(input.val())) {
-        input.css("border-color", "green")
-        info.text('').css('color', 'green')
-      } else {
-        input.css("border-color", "red")
-        info.text('email address is not valid').css('color', 'red')
-      }
-    })
+    $('[name="email"]').checkEmail()
+    
   </script>
 </body>
 
