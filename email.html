@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .emailsucces{
+        border-color:green;
+
+      }
+      .emailfailed{
+        border-color:red;
+      }
+      #error{
+        color:red
+      }
+    </style>
+  </head>
+  <body>
+    <form >
+      <table>
+        <tr>
+          <td><input type="text" name="email" id="email" /></td>
+          <td><span id="error"></span></td>
+        </tr>
+      </table>
+
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"> </script>
+    <script>
+    $("#email").keyup(()=>{
+      let email = document.getElementById('email').value
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{3,}))$/;
+      var hasil = re.test(String(email).toLowerCase());
+      if(hasil){
+        console.log(hasil);
+        $('#email').removeClass('emailfailed')
+        $('#email').addClass('emailsucces')
+        $("#error").html( "" );
+
+      }else{
+        $('#email').addClass('emailfailed')
+        $("#error").html( "Hello" );
+      }
+    })
+
+     </script>
+  </body>
+</html>
