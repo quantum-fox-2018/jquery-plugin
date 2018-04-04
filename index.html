@@ -14,13 +14,16 @@
     <script src="./lib/validate-email.js"></script>
     <script>
     let p = document.querySelector('p')
+    let email = document.querySelector('input')
       document.querySelector('input[name="email"]').addEventListener('keyup',function(){
         if(validateEmail(this.value)){
           p.textContent = 'Email is correct'
           p.style.color = 'green'
+          email.style.borderColor = 'green'
         } else {
           p.textContent = 'Email is incorrect'
           p.style.color = 'red'
+          email.style.borderColor = 'red'
         }
       })
     </script>
