@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>miniquery - checkemail</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./lib/validate-email.js"></script>
+</head>
+
+<body>
+  <h1>Check your email!</h1>
+
+  <p>Input an email address:</p>
+  <input name="email">
+  <span name="info"></span>
+
+  <script>
+    $('[name="email"]').checkEmail()
+    
+  </script>
+</body>
+
+</html>
